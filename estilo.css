@@ -359,6 +359,20 @@ html {
   .formulario textarea {
     width: 100%;
   }
+
+  .contenedor {
+    flex-direction: column; /* Asegúrate de que los elementos se apilen en móviles */
+    align-items: center; /* Centra los elementos en móviles */
+ }
+
+  .card {
+    width: 90%; /* Ajusta el ancho de las tarjetas en móviles */
+    margin: 1em 0; /* Espacio entre tarjetas */
+  }
+
+  .subTitulos {
+    padding: 0 1em; /* Agrega padding para un mejor diseño */
+  }
 }
 
 @media (max-width: 480px) {
