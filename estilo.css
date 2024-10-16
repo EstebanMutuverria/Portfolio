@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+.main a{
+  color: aqua;
+}
+
+main i{
+  margin-top: 1em;
+  box-shadow: 1px 3px 11px -5px black;
+}
+
+.wrapper, 
+.portfolio{
+    width: 100vw;
+    height: 100vh;
+    background-color: #23263b;
+    color: white;
+}
+
+.Navegador{
+  display: flex; /*Para que los elementos se pongan uno al lado del otro*/
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.Logo span{
+  color: aqua;
+}
+
+.Logo{
+  margin-top: -7px;
+}
+
+.Menu a{
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   
+}
+
+.Menu li{
+  list-style: none;
+}
+
+.Menu{
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.Menu a:hover{
+  background-color: aqua;
+  color: #23263b;
+  font-weight: bold;
+  transition: ease-in .4s;
+}
+
+.main{
+  margin: 0 auto;
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+}
+
+h1{
+  font-size: 3em;
+}
+
+span{
+  color: aqua;
+}
+
+.descargar-cv{
+  padding:10px 20px ;
+  background-color: aqua;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
+}
+
+.descargar-cv:hover{
+  background-color: #fff;
+  box-shadow: none
+}
+
+.main img{
+  width: 300px;
+  border: 7px solid aqua;
+}
+
+.about{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100vw;
+  align-items: center;
+}
+
+.about img{
+  width: 100%;
+  grid-column: 1/5;
+}
+
+.tech-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-list img {
+  width: 100px; 
+  height: auto; 
+}
+.about-info{
+  grid-column: 5/10;
+  padding: 3em;
+}
+
+.about-info h2{
+  font-size: 2em;
+  color: #23263b;
+}
+
+.divider{
+  height: 4px;
+  width: 60px;
+  background-color: aqua;
+  margin-top: 5px;
+  margin-bottom: 2em;
+}
+
+.about p{
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.portfolio-heading{
+  width: 100vw;
+  padding: 5em;
+}
+
+.portfolio-heading h2{
+  font-size: 2.5em;
+}
+
+.portfolio .contenedor{
+  width: 80vw;
+  height: 80vh;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+}
+
+.card{
+  width: 300px;
+}
+
+.card__img{
+  width: 100%;
+  height: 300px;
+  background-image: url(./Imagenes/img\ seccion\ proyectos.jpg);
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: left 10%;
+  margin-left: -30px;
+}
+
+.subTitulos h3 {
+  margin-bottom: 10px; 
+  
+}
+
+.subTitulos p {
+  margin-bottom: 20px; 
+  
+}
+
+.subTitulos {
+  margin-bottom: 30px; 
+}
+
+.fa-brands{
+  font-size: 30px;
+  color: aqua;
+  cursor: pointer;
+}
+
+.contenedor-contacto{
+  padding: 3em;
+  margin: 0 auto;
+}
+
+.contenedor-contacto img{
+  bottom: 0px;
+}
+
+.contacto-heading h2{
+  font-size: 3em;
+  margin-left: 30px;
+}
+
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin-top: 2em;
+}
+
+.formulario input{
+  padding: 10px 20px;
+  margin-bottom: 1em;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.formulario textarea{
+  height: 150px;
+  background: none;
+  padding: 1.5em;
+  border: 1px solid black;
+}
+
+.btn-subir{
+  padding: 10px 20px;
+  margin: 1em;
+  border: none;
+  text-transform: uppercase;
+  background-color: #23263b;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 3px 11px -5px aqua;
+}
+
+.btn-subir:hover{
+  background-color: black;
+  box-shadow: none;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200px;
+  background-color: #23263b;
+}
+
+.contenido h2{
+  font-size: 3em;
+}
+
+.contenido h5
+{
+  font-size: 1.5em;
+}
+
+.redes-sociales{
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-top: 1em;
+}
+
+.redes-sociales i{
+  font-size: 3em;
+  color: aqua;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.footer img{
+  size: 5px;
+  width: 50px;
+}

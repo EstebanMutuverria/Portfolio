@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('Z8dptwvJh7bNx8KsJ')
+  </script>
+  <script>
+      (function(){
+          emailjs.init("Z8dptwvJh7bNx8KsJ"); 
+        })();
+    </script>
+  <script src="codigo.js" defer></script>
+
+  <script>
+     function sendEmail() {
+        var nombre = document.querySelector('input[name="nombre"]').value;
+        var apellido = document.querySelector('input[name="apellido"]').value;
+        var email = document.querySelector('input[name="email"]').value;
+        var mensaje = document.querySelector('textarea[name="mensaje"]').value;
+
+       // Crear el objeto templateParams con los valores correctos
+        var templateParams = {
+        from_name: nombre + " " + apellido, // Combinar nombre y apellido
+        message: mensaje,
+        email_id: email // Cambia "email_id" por "email" si es así como lo tienes en la plantilla
+       };
+        const serviceID = 'service_eg5crwo';
+        const templateID = 'template_fnfoqiw';
+
+
+        emailjs.send(serviceID, templateID, templateParams)
+        .then(function(response) {
+            alert("Mensaje enviado correctamente.");
+        }, function(error) {
+            alert("Error al enviar el mensaje: " + JSON.stringify(error));
+        });
+        
+    }
+  </script>
+
+</head>
+<body>
+  <div class = "wrapper">
+    <header>
+        <nav class = "Navegador">
+            <div class = "Logo">
+                <h2>E<span>M</span></h2>
+            </div>
+            <ul class = "Menu">
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mi</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id ="Inicio" class = "main">
+      <div class = "info-content">
+          <h1>Soy <span>Esteban </span>Mutuverria</h1>
+          <p>Tengo 20 años y mi principal objetivo es mejorar mis habilidades y profesionalizarme en el ámbito de la programación.
+            Aprendo con rapidez, me gusta trabajar en equipo y tengo responsabilidad. 
+          </p>
+            <a href="./Imagenes/Curriculum Hombre Simple y  Sobrio Gris Azúl.jpg">
+                <i class="fa-regular fa-file"> CV</i>
+            </a> 
+      </div>
+      <img src="./Imagenes/Imagen EstebanMutuverria.jpg" alt="">
+    </main>
+  </div>
+
+  <div  id = "sobre-mi" class = "about">
+     <img src="./Imagenes/Imagen fondo.jpg" alt="">
+     <div class = "about-info">
+         <h2>Sobre mí</h2>
+         <div class = "divider"></div>
+         <p>Soy un estudiante avanzado de la tecnicatura universitaria en programación (UTN). 
+            Actualmente estoy en segundo año y durante este tiempo he adquirido una gran variedad de conocimientos y conceptos como lenguajes de programación y tecnologías.
+            También he aprendido conceptos de sistemas informáticos. Además, estudio ingles desde el 2015 y recientemente obtuve un certificado de nivel B1.
+         </p>
+         <p>
+            Estos son algunos de mis conocimientos:
+         </p>
+         <div class="tech-list">
+            <img src="./Imagenes/C_Logo.png" alt="C">
+            <img src="./Imagenes/ISO_C++_Logo.svg.png" alt="C++">
+            <img src="./Imagenes/c--4.svg" alt="C#">
+            <img src="./Imagenes/sql_logo.png" alt="SQL">
+            <img src="./Imagenes/Microsoft_.NET_logo.svg.png" alt=".Net">
+            <img src="./Imagenes/html-logo.png" alt="HTML">
+            <img src="./Imagenes/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript">
+            <img src="./Imagenes/CSS3_logo_and_wordmark.svg.png" alt="CSS">
+        </div>        </div>
+  </div>
+
+  <div id = "proyectos" class = "portfolio">
+    <div class = "portfolio-heading">
+        <h2>Mis proyectos</h2>
+        <div class = "divider"></div>
+
+    </div>
+    <div class = "contenedor">
+       <div class = "card">
+          <div class = "card__img">
+          </div>
+        </div>
+        <div class = "subTitulos">
+            <h3>Gestión de Farmacia: </h3>
+            <p>
+               Este proyecto brinda la posibilidad de agregar, modificar, editar, eliminar e incluso
+               gestionar la venta de productos de una farmacia. Todo elborado con c++(manejo de archivos
+               y programación orientada a objetos). Link:
+               <a href="https://github.com/EstebanMutuverria/Gestion-de-farmacia" target="_blank">
+                <i class="fa-brands fa-github"></i>
+               </a>
+            </p>
+            <h3>Gestión de articulos:</h3>
+            <p>
+                Este proyecto tiene la capacidad de agregar, modificar, editar y eliminar un articulo.
+                Utilice TSQL, C# y .NET en Visual Studio y Azure Data Studio. Link: 
+                <a href="https://github.com/EstebanMutuverria/Gesti-n-de-Art-culos" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a> 
+            </p>
+            <h3>Portfolio:</h3>
+            <p>
+                Este portfolio se realizo con HTML, CSS y JavaScript. Link:
+                <a href="https://github.com/EstebanMutuverria/Portfolio" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <div id = "contacto"class = "contacto">
+        <div class = "contacto-heading">
+            <h2>Sigamos en contacto</h2>
+            <div class = "divider"></div>
+        </div>
+        <div class = "contenedor-contacto">
+           <img src="./Imagenes/Img contacto.jpg" alt="contact img">
+           <div class = "formulario-contacto">
+            <h4>Envíame un mensaje</h4>
+            <form class="formulario" id="contactForm">
+                <input type="text" name="nombre" placeholder="Nombre">
+                <input type="text" name="apellido" placeholder="Apellido">
+                <input type="email" name="email" placeholder="E-mail">
+                <textarea name="mensaje" placeholder="Escribí tu mensaje acá"></textarea>
+                <button type="button" class="btn-subir" onclick="sendEmail()">Enviar mensaje</button>
+            </form>
+
+           </div>
+        </div>
+
+    </div>
+
+    <footer class = "footer">
+        <div class ="contenido">
+            <h2>Esteban Mutuverria</h2>
+            <h5>Full Stack developer</h5>
+        </div>
+        <div class ="redes-sociales">
+            <a href="https://www.linkedin.com/in/esteban-mutuverria-134801253/">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/EstebanMutuverria">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:estebanmutuverria003@gmail.com" target="_blank">
+                <img src="./Imagenes/Gmail_icon_(2020).svg.png">
+            </a>
+        </div>
+
+    </footer>
+  
+</body>
+</html>
