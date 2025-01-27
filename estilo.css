@@ -115,16 +115,20 @@ span {
 }
 
 .tech-list {
-  display: grid;
-  gap: 1rem; /* Espaciado entre las imágenes */
-  justify-items: center; /* Centra las imágenes horizontalmente */
-  margin-top: 1rem;
+  display: flex; /* Flexbox para diseño en filas */
+  flex-wrap: wrap; /* Permite que las imágenes pasen a una nueva fila si no hay espacio */
+  justify-content: space-between; /* Espaciado uniforme entre imágenes */
+  gap: 1rem; /* Espaciado entre filas */
 }
 
 .tech-list img {
-  max-width: 100px; /* Ajusta el tamaño máximo de las imágenes */
-  height: auto;
-  transition: transform 0.3s ease; /* Agrega un efecto de hover opcional */
+  max-width: 120px; /* Ajusta el tamaño máximo de las imágenes */
+  object-fit: contain; /* Asegura que las imágenes no se deformen */
+  transition: transform 0.3s ease; /* Efecto de hover opcional */
+}
+
+.JavaScriptClass img{
+  max-width: 175px;
 }
 
 .tech-list img:hover {
@@ -413,4 +417,10 @@ html {
   .redes-sociales {
     width: 200px;
   }
+
+  .tech-list img{
+    width: calc(50% - 1rem);
+  }
+
+  
 }
