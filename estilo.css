@@ -177,6 +177,11 @@ span {
   align-items: center;
 }
 
+.portfolio-heading{
+  font-size: 25px;
+  margin-top: 5px;
+}
+
 .about img {
   width: 100%;
   grid-column: 1/5;
@@ -238,6 +243,7 @@ span {
 /* Estilos actualizados */
 
 .contenedor {
+  margin-top: -60px;
   display: grid; /* Usamos Grid en lugar de Flexbox */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dos columnas flexibles */
   gap: 20px; /* Espaciado entre filas y columnas */
