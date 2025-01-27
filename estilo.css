@@ -183,48 +183,88 @@ span {
   font-weight: bold;
 }
 
-.portfolio-heading {
-  width: 100vw;
-  padding: 5em;
-}
-
-.portfolio-heading h2 {
-  font-size: 2.5em;
-}
-
-.portfolio .contenedor {
-  width: 80vw;
-  height: 80vh;
-  margin: 0 auto;
-  justify-content: center;
+.portfolio {
+  min-height: 100vh; /* La sección siempre tendrá al menos el tamaño de la pantalla */
   display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  padding: 40px 20px; /* Espaciado interno */
+  gap: 30px; /* Espaciado entre los elementos */
 }
 
-.card {
-  width: 300px;
+/* Estilos actualizados */
+
+.contenedor {
+  display: grid; /* Usamos Grid en lugar de Flexbox */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dos columnas flexibles */
+  gap: 20px; /* Espaciado entre filas y columnas */
+  justify-content: center; /* Centra las columnas horizontalmente si sobran espacios */
+  width: 100%; /* Ajusta el ancho del contenedor */
+  padding: 20px 0; /* Espaciado interno */
 }
 
-.card__img {
+.InfoProyecto {
+  background: #0d112c; /* Fondo opcional */
+  border: 1px solid #0d112c; /* Bordes opcionales */
+  border-radius: 10px; /* Esquinas redondeadas */
+  padding: 15px; /* Espaciado interno */
+  box-sizing: border-box; /* Incluye el padding y el border en el tamaño */
+  transition: transform 0.3s ease; /* Animación al hover */
+}
+
+.InfoProyecto:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+.InfoProyecto p {
   width: 100%;
-  height: 300px;
-  background-image: url(./Imagenes/img\ seccion\ proyectos.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left 10%;
-  margin-left: -30px;
-}
-
-.subTitulos h3 {
-  margin-bottom: 10px;
-}
-
-.subTitulos p {
-  margin-bottom: 20px;
+  text-align: justify; /* Justificación del texto */
+  font-size: 14px; /* Tamaño del texto */
 }
 
 .subTitulos {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column; /* Organiza el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  margin: 0;
+  padding: 20px 0; /* Espaciado interno */
+  box-sizing: border-box;
+  border: 1px solid aqua; /* Bordes destacados */
+  border-radius: 1rem;
+  background-color: #23263b;
+  transition: transform 0.3s ease; /* Animación al hover */
+  text-align: center; /* Centra el contenido de texto */
 }
+
+.subTitulos:hover {
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+.InfoProyectos {
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.InfoProyectos p {
+  margin-left: 20px; /* Espaciado a la izquierda del texto */
+  font-style: italic; /* Texto en cursiva */
+  text-align: justify; /* Justificación del texto */
+}
+
+/* Adaptación para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+
+  .InfoProyecto {
+    max-width: 100%; /* Ancho completo en pantallas pequeñas */
+  }
+}
+
+/* ----------------------------*/
+
 
 .fa-brands {
   font-size: 30px;
@@ -267,6 +307,8 @@ span {
   padding: 1.5em;
   border: 1px solid black;
 }
+
+
 
 .btn-subir {
   padding: 10px 20px;
@@ -382,10 +424,6 @@ html {
     height: auto;
   }
 
-  .card {
-    width: 90%;
-    margin-bottom: 1em;
-  }
 
   .formulario {
     width: 80vw;
@@ -400,14 +438,7 @@ html {
     align-items: center; /* Centra los elementos en móviles */
  }
 
-  .card {
-    width: 90%; /* Ajusta el ancho de las tarjetas en móviles */
-    margin: 1em 0; /* Espacio entre tarjetas */
-  }
-
-  .subTitulos {
-    padding: 0 1em; /* Agrega padding para un mejor diseño */
-  }
+ 
 }
 
 @media (max-width: 480px) {
