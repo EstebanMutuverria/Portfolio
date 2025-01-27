@@ -28,10 +28,33 @@ main i {
   color: white;
 }
 
+.DivNavegador {
+  position: fixed;
+  top: 0; /* El menú queda fijo en la parte superior */
+  width: 100%; /* Ocupar todo el ancho de la pantalla *
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Añade sombra */
+  background-color:#23263b; /* Fondo para visibilidad */
+}
+
 .Navegador {
   display: flex;
-  justify-content: space-between;
-  padding: 2em;
+  justify-content: center; /* Centra los elementos dentro del contenedor */
+  padding: 1em;
+  gap: 2em; /* Espacio entre cada opción del navegador */
+}
+
+.Navegador a { /* Estilo para los enlaces del navegador */
+  text-decoration: none; /* Eliminar subrayado */
+  color: black; /* Color de texto */
+  padding: 0.5em 1em; /* Añade espacio interno para mejor clicabilidad */
+  transition: color 0.3s ease; /* Efecto suave al pasar el ratón */
+}
+
+.Navegador a:hover {
+  color: grey !important; /* Cambiar color al pasar el ratón */
+  background-color: black !important;
+  border-radius: 1rem;
 }
 
 .Logo span {
@@ -72,6 +95,8 @@ main i {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  margin-top: 2em;
+  padding: 2em;
 }
 
 h1 {
@@ -99,7 +124,7 @@ span {
 
 .main img {
   width: 300px;
-  border: 7px solid aqua;
+  border: 7px solid #3f446d;
 }
 
 .about {
@@ -422,5 +447,5 @@ html {
     width: calc(50% - 1rem);
   }
 
-  
+
 }
