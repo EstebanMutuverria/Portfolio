@@ -15,9 +15,47 @@ body {
   color: aqua;
 }
 
+.main img{
+  transition: transform 0.3s ease; /* Animación al hover */
+  margin-left: 30px;
+}
+
+.main img:hover{
+  transform: scale(1.1); /* Efecto de agrandado al pasar el ratón */
+}
+
 main i {
   margin-top: 1em;
   box-shadow: 1px 3px 11px -5px black;
+}
+
+.btn-cv {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #0d112c; /* Color de fondo */
+  color: white; /* Color del texto */
+  font-size: 16px;
+  padding: 10px 20px; /* Tamaño del botón */
+  border: none;
+  border-radius: 30px; /* Botón redondeado */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animación suave */
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Efecto hover */
+.btn-cv:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  background-color: #23263b; /* Cambia el color de fondo */
+}
+
+/* Ícono dentro del botón */
+.btn-cv i {
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  font-size: 18px;
+  text-align: center;
+  margin-top: auto;
 }
 
 .wrapper, 
@@ -212,9 +250,7 @@ span {
   transition: transform 0.3s ease; /* Animación al hover */
 }
 
-.InfoProyecto:hover {
-  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
-}
+
 
 .InfoProyecto p {
   width: 100%;
@@ -229,9 +265,10 @@ span {
   margin: 0;
   padding: 20px 0; /* Espaciado interno */
   box-sizing: border-box;
+  box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
   border: 1px solid aqua; /* Bordes destacados */
   border-radius: 1rem;
-  background-color: #23263b;
+  background-color: #0d112c;
   transition: transform 0.3s ease; /* Animación al hover */
   text-align: center; /* Centra el contenido de texto */
 }
@@ -335,6 +372,8 @@ span {
   width: 100vw;
   height: 200px;
   background-color: #23263b;
+  transform: scale(1.05) !important; /* Efecto de zoom */
+
 }
 
 .contenido h2 {
@@ -355,7 +394,21 @@ span {
 .redes-sociales i {
   font-size: 3em;
   color: aqua;
+  transition: transform 0.3s ease; /* Animación al hover */
 }
+
+.redes-sociales i:hover{
+  transform: scale(1.1); /* Efecto de agrandado al pasar el ratón */
+}
+
+.redes-sociales img{
+  transition: transform 0.3s ease; /* Animación al hover */
+}
+
+.redes-sociales img:hover{
+  transform: scale(1.1); /* Efecto de agrandado al pasar el ratón */
+}
+
 
 html {
   scroll-behavior: smooth;
