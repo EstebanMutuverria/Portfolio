@@ -13,8 +13,13 @@ body {
 
 .main a {
   color: aqua;
+  font-weight: bold;
 }
 
+.main p{
+  font-size: 20px;
+  margin-top: 15px;
+}
 .main img{
   transition: transform 0.3s ease; /* Animación al hover */
   margin-left: 30px;
@@ -41,7 +46,7 @@ main i {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
   transition: transform 0.3s ease, background-color 0.3s ease; /* Animación suave */
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /* Efecto hover */
