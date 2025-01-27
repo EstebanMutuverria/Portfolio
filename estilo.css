@@ -115,14 +115,20 @@ span {
 }
 
 .tech-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  gap: 1rem; /* Espaciado entre las imágenes */
+  justify-items: center; /* Centra las imágenes horizontalmente */
+  margin-top: 1rem;
 }
 
 .tech-list img {
-  width: 100px;
+  max-width: 100px; /* Ajusta el tamaño máximo de las imágenes */
   height: auto;
+  transition: transform 0.3s ease; /* Agrega un efecto de hover opcional */
+}
+
+.tech-list img:hover {
+  transform: scale(1.1); /* Efecto de agrandado al pasar el ratón */
 }
 
 .about-info {
