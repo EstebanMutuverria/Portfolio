@@ -300,20 +300,6 @@ span {
   text-align: justify; /* Justificación del texto */
 }
 
-/* Adaptación para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .contenedor {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-  }
-
-  .InfoProyecto {
-    max-width: 100%; /* Ancho completo en pantallas pequeñas */
-  }
-}
-
-/* ----------------------------*/
-
-
 .fa-brands {
   font-size: 30px;
   color: aqua;
@@ -479,114 +465,52 @@ html {
   width: 50px;
 }
 
-/* Estilos Responsivos */
+/* RESPONSIVE DESIGN */
 
-@media (max-width: 1024px) {
-  .main {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-  }
-
-  .main img {
-    width: 200px;
-    margin-bottom: 2em;
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .about img {
-    grid-column: 1/11;
-  }
-
-  .about-info {
-    grid-column: 1/11;
-  }
-
-  .tech-list {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .Navegador {
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-  }
-
-  .Menu {
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .main h1 {
-    font-size: 2.5em;
-  }
-
-  .main img {
-    width: 150px;
-  }
-
-  .portfolio .contenedor {
-    flex-direction: column;
-    height: auto;
-  }
-
-
-  .formulario {
-    width: 80vw;
-  }
-
-  .formulario textarea {
-    width: 100%;
-  }
-
-  .contenedor {
-    flex-direction: column; /* Asegúrate de que los elementos se apilen en móviles */
-    align-items: center; /* Centra los elementos en móviles */
- }
-
- 
-}
-
+/* Para pantallas muy pequeñas (hasta 480px) */
 @media (max-width: 480px) {
-  .main h1 {
-    font-size: 2em;
+  h1 {
+      font-size: var(--font-size-medium);
   }
-
-  .main img {
-    width: 100px;
+  .btn-cv, .descargar-cv {
+      font-size: var(--font-size-small);
+      padding: 8px 16px;
   }
-
-  .about-info {
-    padding: 1.5em;
+  .main {
+      padding: 10px;
+      gap: 10px;
   }
-
-  .portfolio-heading h2 {
-    font-size: 2em;
+  .card {
+      padding: 15px;
   }
+}
 
-
-  .formulario {
-    width: 90vw;
+/* Para pantallas medianas (481px a 768px) */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2em;
   }
-
-  .footer {
-    height: auto;
+  .main {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      padding: 15px;
+      gap: 15px;
   }
-
-  .redes-sociales {
-    width: 200px;
+  .btn-cv, .descargar-cv {
+      font-size: 1.2em;
   }
+}
 
-  .tech-list img{
-    width: calc(50% - 1rem);
+/* Para pantallas grandes (más de 1200px) */
+@media (min-width: 1200px) {
+  .main {
+      padding: 40px;
+      gap: 30px;
   }
-
-
+  .btn-cv, .descargar-cv {
+      font-size: 1.8em;
+      padding: 15px 30px;
+  }
+  .card {
+      padding: 30px;
+  }
 }
