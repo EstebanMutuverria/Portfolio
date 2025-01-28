@@ -25,9 +25,9 @@ document.querySelectorAll('.Menu a').forEach(link => {
 
   //función que muestra el menu responsive
 function responsiveMenu() {
-    var x = document.getElementById("nav");
+    var x = document.getElementById("mobile-menu");
     if (x.className === "") {
-        x.className = "responsive";
+        x.className = "menu";
     } else {
         x.className = "";
     }
