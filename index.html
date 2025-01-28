@@ -33,19 +33,42 @@
         message: mensaje,
         email_id: email // Cambia "email_id" por "email" si es así como lo tienes en la plantilla
        };
-        const serviceID = 'service_eg5crwo';
+        const serviceID = 'service_qo7rxri';
         const templateID = 'template_fnfoqiw';
 
 
-        emailjs.send(serviceID, templateID, templateParams)
-        .then(function(response) {
-            alert("Mensaje enviado correctamente.");
-        }, function(error) {
-            alert("Error al enviar el mensaje: " + JSON.stringify(error));
-        });
+        function validateForm() {
+    const nombre = document.querySelector('input[name="nombre"]').value.trim();
+    const apellido = document.querySelector('input[name="apellido"]').value.trim();
+    const email = document.querySelector('input[name="email"]').value.trim();
+    const mensaje = document.querySelector('textarea[name="mensaje"]').value.trim();
+
+    if (!nombre || !apellido || !email || !mensaje) {
+        alert("Por favor, completa todos los campos.");
+        return false;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Por favor, ingresa un correo electrónico válido.");
+        return false;
+    }
+
+    return true;
+}
+
         
     }
   </script>
+
+      
+ <script>
+  const menuToggle = document.getElementById('mobile-menu');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+ </script>
 
 </head>
 <body>
@@ -204,6 +227,7 @@
                 <input type="text" name="apellido" placeholder="Apellido">
                 <input type="email" name="email" placeholder="E-mail">
                 <textarea name="mensaje" placeholder="Escribí tu mensaje acá"></textarea>
+                <!-- <button type="button" class="btn-subir" onclick="if(validateForm()) sendEmail()">Enviar mensaje</button> -->
                 <button type="button" class="btn-subir" onclick="sendEmail()">Enviar mensaje</button>
             </form>
 
@@ -230,16 +254,6 @@
         </div>
 
     </footer>
-    
-    <script>
-      const menuToggle = document.getElementById('mobile-menu');
-      const menu = document.getElementById('menu');
-    
-      menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-      });
-    </script>
-    
   
 </body>
 </html>
