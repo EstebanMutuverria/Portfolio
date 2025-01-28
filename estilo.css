@@ -465,6 +465,22 @@ html {
   width: 50px;
 }
 
+/* Estilos para el botón de menú en móviles */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Ocultar el menú en móviles por defecto */
+.Navegador.Menu {
+  display: none;
+}
+
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 480px) {
@@ -474,47 +490,8 @@ html {
     padding: 10px;
   }
 
-  /*
-    
-    nav {
-       display: none;
-    
-    nav.responsive {
-       display: block;
-       background-color: rgba(0, 0, 0, .8);
-       width: 100%;
-       position: absolute;
-       top: 48px;
-       left: 0;
-       padding: 10px 0;
-    
-    nav.responsive ul {
-       display: block !important;
-       text-align: center;
-    
-    nav.responsive ul li {
-       margin: 5px 0;
-    
-    icono-nav {
-       display: block;
-     
-
-
-
-
-
-  */
   
-  .Navegador ul{
-    display: block !important;
-    text-align: center;
-  }
-
-    icono-nav {
-    display: block;
-    }
-
-    .menu-toggle {
+  .menu-toggle {
     display: block;
   }
 
@@ -522,13 +499,13 @@ html {
     display: none;
     flex-direction: column;
     width: 100%;
-    position: absolute;
-    top: 48px;
+    position: fixed;
+    top: 0;
     left: 0;
     background-color: #23263b;
     height: 100vh;
     align-items: center;
-    padding-top: 10px 0;
+    padding-top: 50px;
     gap: 1em;
   }
 

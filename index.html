@@ -56,16 +56,16 @@
             <div class = "Logo">
                 <h2>E<span>M</span></h2>
             </div>
-            <ul class = "Menu">
+            <div class="menu-toggle" id="mobile-menu">
+              ☰
+            </div>
+            <ul class = "Menu" id = "menu">
                 <li><a href="#Inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mi</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-        <div id="icono-nav" onclick="responsiveMenu()">
-          <i class="fa-solid fa-bars"></i>
-      </div>
     </div>
     </header>
     <main id ="Inicio" class = "main">
@@ -230,6 +230,16 @@
         </div>
 
     </footer>
+    
+    <script>
+      const menuToggle = document.getElementById('mobile-menu');
+      const menu = document.getElementById('menu');
+    
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+    </script>
+    
   
 </body>
 </html>
