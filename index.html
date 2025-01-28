@@ -26,6 +26,17 @@
         var apellido = document.querySelector('input[name="apellido"]').value;
         var email = document.querySelector('input[name="email"]').value;
         var mensaje = document.querySelector('textarea[name="mensaje"]').value;
+        
+        
+            if (!nombre || !apellido || !email || !mensaje) {
+                alert("Por favor, completa todos los campos.");
+                return false;
+            }
+        
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert("Por favor, ingresa un correo electrónico válido.");
+                return false;
+            }
 
        // Crear el objeto templateParams con los valores correctos
         var templateParams = {
@@ -36,28 +47,18 @@
         const serviceID = 'service_qo7rxri';
         const templateID = 'template_fnfoqiw';
 
-
-        function validateForm() {
-    const nombre = document.querySelector('input[name="nombre"]').value.trim();
-    const apellido = document.querySelector('input[name="apellido"]').value.trim();
-    const email = document.querySelector('input[name="email"]').value.trim();
-    const mensaje = document.querySelector('textarea[name="mensaje"]').value.trim();
-
-    if (!nombre || !apellido || !email || !mensaje) {
-        alert("Por favor, completa todos los campos.");
-        return false;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert("Por favor, ingresa un correo electrónico válido.");
-        return false;
-    }
+        emailjs.send(serviceID, templateID, templateParams)
+    .then(function(response) {
+        alert('¡Mensaje enviado correctamente!');
+        console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+        alert('Error al enviar el mensaje. Por favor, inténtalo nuevamente.');
+        console.error('FAILED...', error);
+    });
 
     return true;
-}
+ }
 
-        
-    }
   </script>
 
       
@@ -227,7 +228,6 @@
                 <input type="text" name="apellido" placeholder="Apellido">
                 <input type="email" name="email" placeholder="E-mail">
                 <textarea name="mensaje" placeholder="Escribí tu mensaje acá"></textarea>
-                <!-- <button type="button" class="btn-subir" onclick="if(validateForm()) sendEmail()">Enviar mensaje</button> -->
                 <button type="button" class="btn-subir" onclick="sendEmail()">Enviar mensaje</button>
             </form>
 
