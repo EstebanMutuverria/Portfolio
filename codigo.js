@@ -15,3 +15,10 @@ document.querySelectorAll('.Menu a').forEach(link => {
         });
     });
   });
+
+  const menuToggle = document.getElementById('mobile-menu');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
