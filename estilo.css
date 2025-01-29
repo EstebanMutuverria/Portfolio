@@ -529,7 +529,7 @@ html {
     transition: all 0.3s ease-in-out;
     visibility: hidden;
     opacity: 0;
-    top: 50px; /* Ajusta para que no empiece en la parte superior */
+    top: 60px; /* Debe empezar después del navbar */
   }
 
   .Menu.active {
@@ -552,7 +552,7 @@ html {
     flex-direction: column;
     align-items: center;
     padding: 1em;
-    margin-top: 1em;
+    margin-top: 80px;
     top: 50px;
   }
 
@@ -585,13 +585,22 @@ html {
   }
 
   .DivNavegador {
-    padding: 0.5em;
-  }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #23263b; /* Color de fondo para evitar superposición */
+    z-index: 1000; /* Lo mantiene sobre otros elementos */
+    padding: 10px 0;
+}
 
-  .Navegador {
-    flex-direction: column;
-    gap: 1em;
-  }
+.Navegador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    height: 60px; /* Ajusta la altura para no superponer */
+}
 
   .Logo {
     margin-top: -5px;
