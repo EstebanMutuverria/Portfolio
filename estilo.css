@@ -489,10 +489,7 @@ html {
     line-height: 1.5;
     padding: 10px;
   }
-  
-  .DivNavegador{
-    top: 50px;
-  }
+
   
   .menu-toggle {
     display: block; /* Muestra el ícono de menú */
@@ -532,6 +529,7 @@ html {
     transition: all 0.3s ease-in-out;
     visibility: hidden;
     opacity: 0;
+    top: 50px; /* Ajusta para que no empiece en la parte superior */
   }
 
   .Menu.active {
