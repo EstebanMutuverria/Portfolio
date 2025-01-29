@@ -498,11 +498,6 @@ html {
     color: white;
   }
 
-  .Menu{
-    transition: all 0.3s ease-in-out;
-    display: none;
-  }
-
   .Menu li {
     width: 100%;
     text-align: center;
@@ -518,7 +513,7 @@ html {
     background-color: #444;
   }
 
-  .Navegador .Menu {
+  .Menu {
     flex-direction: column;
     width: 100%;
     position: absolute;
@@ -531,9 +526,11 @@ html {
     padding-top: 50px;
     gap: 1em;
     z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    display: none;
   }
 
-  .Navegador .Menu .active {
+  .Menu .active {
     display: flex;
   }
 

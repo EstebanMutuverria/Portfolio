@@ -63,16 +63,14 @@
 
       
  <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('mobile-menu');
-  const menu = document.querySelector('.Navegador .Menu');
-
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-});
-
-
+   document.addEventListener('DOMContentLoaded', () => {
+     const menuToggle = document.getElementById('mobile-menu');
+     const menu = document.querySelector('.Menu'); // Corregir selección
+   
+     menuToggle.addEventListener('click', () => {
+       menu.classList.toggle('active');
+     });
+   });
  </script>
 
 </head>
