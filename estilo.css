@@ -500,6 +500,7 @@ html {
 
   .Menu{
     transition: all 0.3s ease-in-out;
+    display: none;
   }
 
   .Menu li {
@@ -517,7 +518,7 @@ html {
     background-color: #444;
   }
 
-  .Navegador.Menu {
+  .Navegador .Menu {
     flex-direction: column;
     width: 100%;
     position: absolute;
@@ -532,7 +533,7 @@ html {
     z-index: 1000;
   }
 
-  .Navegador.Menu.active {
+  .Navegador .Menu .active {
     display: flex;
   }
 
