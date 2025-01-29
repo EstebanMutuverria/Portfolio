@@ -492,14 +492,37 @@ html {
 
   
   .menu-toggle {
-    display: block;
+    display: block; /* Muestra el ícono de menú */
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+  }
+
+  .Menu{
+    transition: all 0.3s ease-in-out;
+  }
+
+  .Menu li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .Menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .Menu li a:hover {
+    background-color: #444;
   }
 
   .Navegador.Menu {
     display: none;
     flex-direction: column;
     width: 100%;
-    position: fixed;
+    position: absolute;
+    color: #333;
     top: 0;
     left: 0;
     background-color: #23263b;
@@ -507,6 +530,7 @@ html {
     align-items: center;
     padding-top: 50px;
     gap: 1em;
+    z-index: 100%;
   }
 
   .Navegador.Menu.active {
