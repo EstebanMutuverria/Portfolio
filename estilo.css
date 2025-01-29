@@ -487,9 +487,43 @@ html {
   body {
     font-size: 14px;
     line-height: 1.5;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
   }
 
+  .main, .portfolio, .about, .contacto {
+    display: flex;
+    flex-direction: column;  /* Asegura que las secciones estén una debajo de la otra */
+    justify-content: flex-start;
+    align-items: center;  /* Centra los elementos */
+    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+    padding: 1rem;  /* Ajusta el espacio */
+    box-sizing: border-box; /* Ajusta el padding para no afectar el layout */
+ }
+
+ .main > * {
+  width: 100%;
+ }
+
+ .main img, .about img, .portfolio img {
+  max-width: 100%;  /* Asegura que las imágenes no se salgan del contenedor */
+  height: auto;     /* Mantiene la proporción */
+  margin-bottom: 1rem;
+ }
+
+ /* Espaciado entre las secciones */
+ .main, .portfolio, .about, .contacto {
+  margin-top: 1rem;
+ }
+ 
+ /* Estilo adicional para los textos */
+ h1, h2, h3, p {
+  text-align: center;
+  width: 100%;
+ }
   
   .menu-toggle {
     display: block; /* Muestra el ícono de menú */
@@ -744,5 +778,10 @@ html {
   .footer img {
     width: 40px;
   }
+
+  .main, .portfolio, .about, .contacto {
+    flex: 1;  /* Esto hace que las secciones crezcan para llenar el espacio disponible */
+ }
+
 }
 
