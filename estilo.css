@@ -518,7 +518,6 @@ html {
   }
 
   .Navegador.Menu {
-    display: none;
     flex-direction: column;
     width: 100%;
     position: absolute;
@@ -530,7 +529,7 @@ html {
     align-items: center;
     padding-top: 50px;
     gap: 1em;
-    z-index: 100%;
+    z-index: 1000;
   }
 
   .Navegador.Menu.active {
@@ -590,12 +589,6 @@ html {
   .Navegador {
     flex-direction: column;
     gap: 1em;
-  }
-
-  .Navegador a {
-    font-size: 14px;
-    padding: 0.5em;
-    text-align: center;
   }
 
   .Logo {

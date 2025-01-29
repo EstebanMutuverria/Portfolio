@@ -15,20 +15,3 @@ document.querySelectorAll('.Menu a').forEach(link => {
         });
     });
   });
-
-  const menuToggle = document.getElementById('mobile-menu');
-  const menu = document.getElementById('menu');
-
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-
-  //función que muestra el menu responsive
-function responsiveMenu() {
-    var x = document.getElementById("mobile-menu");
-    if (x.className === "") {
-        x.className = "menu";
-    } else {
-        x.className = "";
-    }
-}
