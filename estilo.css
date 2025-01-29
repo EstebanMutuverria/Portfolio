@@ -532,7 +532,7 @@ html {
   }
 
   .Menu.active {
-    display: flex;
+    visibility: visible;
     opacity: 1;
   }
 

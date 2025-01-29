@@ -63,22 +63,23 @@
 
       
  <script>
-  //Funcion que permite que el menu se abra
-   document.addEventListener('DOMContentLoaded', () => {
-     const menuToggle = document.getElementById('mobile-menu');
-     const menu = document.querySelector('.Menu'); // Corregir selección
-   
-     menuToggle.addEventListener('click', () => {
-       menu.classList.toggle('active');
-     });
-   });
-    
-  //  Funcion que permite que el menu se cierre
-   document.querySelectorAll('.Menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.Menu').classList.remove('active');
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('mobile-menu');
+    const menu = document.querySelector('.Menu');
+
+    // Toggle para abrir y cerrar el menú
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+    // Cierra el menú cuando se hace clic en un enlace dentro de él
+    document.querySelectorAll('.Menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
     });
 });
+
 
  </script>
 
