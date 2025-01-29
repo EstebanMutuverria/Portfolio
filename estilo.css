@@ -490,10 +490,6 @@ html {
     padding: 10px;
   }
 
-  .Logo{
-    display: none;
-  }
-
   
   .menu-toggle {
     display: block; /* Muestra el ícono de menú */
