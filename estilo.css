@@ -489,7 +489,10 @@ html {
     line-height: 1.5;
     padding: 10px;
   }
-
+  
+  .DivNavegador{
+    top: 50px;
+  }
   
   .menu-toggle {
     display: block; /* Muestra el ícono de menú */
