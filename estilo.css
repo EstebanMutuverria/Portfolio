@@ -527,11 +527,13 @@ html {
     gap: 1em;
     z-index: 1000;
     transition: all 0.3s ease-in-out;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 
-  .Menu .active {
+  .Menu.active {
     display: flex;
+    opacity: 1;
   }
 
   .Navegador a {
