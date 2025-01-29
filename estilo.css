@@ -508,9 +508,15 @@ html {
   width: 100%;
  }
 
+ .main img {
+  height: 50% !important;
+  width: 50% !important; /* Ajusta el ancho de la imagen */
+  max-width: 400px; /* Tamaño máximo para que no se haga demasiado grande */
+  margin: 0 auto; /* Centra la imagen */
+  display: block; /* Asegura que la imagen se comporte como un bloque */
+}
  .main img, .about img, .portfolio img {
   max-width: 100%;  /* Asegura que las imágenes no se salgan del contenedor */
-  height: auto;     /* Mantiene la proporción */
   margin-bottom: 1rem;
  }
 
@@ -580,7 +586,6 @@ html {
   }
 
   .main {
-    width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
