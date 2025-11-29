@@ -21,7 +21,7 @@
   <script src="codigo.js" defer></script>
 
   <script>
-     function sendEmail() {
+    function sendEmail() {
         var nombre = document.querySelector('input[name="nombre"]').value;
         var apellido = document.querySelector('input[name="apellido"]').value;
         var email = document.querySelector('input[name="email"]').value;
@@ -43,7 +43,7 @@
         from_name: nombre + " " + apellido, // Combinar nombre y apellido
         message: mensaje,
         email_id: email // Cambia "email_id" por "email" si es así como lo tienes en la plantilla
-       };
+      };
         const serviceID = 'service_qo7rxri';
         const templateID = 'template_fnfoqiw';
 
@@ -57,12 +57,12 @@
     });
 
     return true;
- }
+  }
 
   </script>
 
       
- <script>
+<script>
   document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('mobile-menu');
     const menu = document.querySelector('.Menu');
@@ -81,7 +81,7 @@
 });
 
 
- </script>
+</script>
 
 </head>
 <body>
@@ -90,7 +90,7 @@
     <header>
         <nav class = "Navegador">
             <div class = "Logo">
-                <h2>E<span>M</span></h2>
+              <h2>E<span>M</span></h2>
             </div>
             <div class="menu-toggle" id="mobile-menu">
               ☰
@@ -114,24 +114,26 @@
             <i class="fa-regular fa-file"></i> Descargar CV
           </a>
       </div>
-      <img src="./Imagenes/Imagen EstebanMutuverria.jpg" alt="">
+      <img class="img-perfil" src="./Imagenes/Imagen EstebanMutuverria.jpg" alt="">
     </main>
   </div>
 
   <div  id = "sobre-mi" class = "about">
-     <img src="./Imagenes/Imagen fondo.jpg" alt="">
-     <div class = "about-info">
-         <h2>Sobre mí</h2>
-         <div class = "divider"></div>
-         <p>Soy Técnico universitario en Programación recibido en la UTN. A lo largo de mi formación, he adquirido una sólida base en diversos lenguajes de programación, tecnologías y conceptos fundamentales de sistemas informáticos. Además, me esfuerzo por mantenerme actualizado en el ámbito tecnológico y mejorar continuamente mis habilidades.
+    <img src="./Imagenes/Imagen fondo.jpg" alt="">
+    <div class = "about-info">
+        <h2>Sobre mí</h2>
+        <div class = "divider"></div>
+        <div class="descripcion">
 
-            Paralelamente, estudio inglés y recientemente obtuve el certificado de nivel B1 emitido por la Universidad de Cambridge (AACI), lo cual refuerza mis capacidades de comunicación en un entorno profesional.
-            
-         </p>
-         <p>
+          <p>Soy Técnico universitario en Programación recibido en la UTN. A lo largo de mi formación, he adquirido una sólida base en diversos lenguajes de programación, tecnologías y conceptos fundamentales de sistemas informáticos. Además, me esfuerzo por mantenerme actualizado en el ámbito tecnológico y mejorar continuamente mis habilidades.
+  
+          Paralelamente, estudio inglés y recientemente obtuve el certificado de nivel B1 emitido por la Universidad de Cambridge (AACI), lo cual refuerza mis capacidades de comunicación en un entorno profesional.
+          </p>
+          <p>
             A continuación, presento algunos de los conocimientos y habilidades que he desarrollado:
-         </p>
-         <div class="tech-list">
+          </p>
+        </div>
+        <div class="tech-list">
             <img src="./Imagenes/C_Logo.png" alt="C">
             <img src="./Imagenes/ISO_C++_Logo.svg.png" alt="C++">
             <img src="./Imagenes/c--4.svg" alt="C#">
@@ -154,18 +156,18 @@
       <div class="subTitulos">
         <h3>Gestión de Farmacia</h3>
         <div class="InfoProyecto">
-          <p>
-            Este proyecto brinda la posibilidad de agregar, modificar, editar, eliminar e incluso
-            gestionar la venta de productos de una farmacia. Todo elaborado con C++ (manejo de archivos
-            y programación orientada a objetos).
-            <br>
-            Ver Código:
-            <a href="https://github.com/EstebanMutuverria/Gestion-de-farmacia" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </p>
-        </div>
+        <p>
+          Este proyecto brinda la posibilidad de agregar, modificar, editar, eliminar e incluso
+          gestionar la venta de productos de una farmacia. Todo elaborado con C++ (manejo de archivos
+          y programación orientada a objetos).
+          <br>
+          Ver Código:
+          <a href="https://github.com/EstebanMutuverria/Gestion-de-farmacia" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </p>
       </div>
+    </div>
   
       <div class="subTitulos">
         <h3>Gestión de artículos</h3>
@@ -233,6 +235,21 @@
             <br>
             Ver Código:
             <a href="https://github.com/EstebanMutuverria/Gestion-de-recetas-py" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="subTitulos">
+        <h3>Aplicacion web bancaria</h3>
+        <div class="InfoProyecto">
+          <p>
+            Aplicacion web desarrollada en Java (JSP, servlets), HTML, CSS, JavaScript, MySQL y Apache Tomcat. Utilizando el patron MVC para la arcquitectura en capaz.
+            Se implemento gestion de roles de usuario, cuentas y trasacciones.
+            <br>
+            Ver Código:
+            <a href="https://github.com/AlejoLg1/Online-Banking" target="_blank">
               <i class="fa-brands fa-github"></i>
             </a>
           </p>

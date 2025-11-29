@@ -65,8 +65,8 @@ main i {
 
 .wrapper, 
 .portfolio {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   background-color: #23263b;
   color: white;
 }
@@ -85,6 +85,7 @@ main i {
   justify-content: center; /* Centra los elementos dentro del contenedor */
   padding: 1em;
   gap: 2em; /* Espacio entre cada opción del navegador */
+  align-items: center;
 }
 
 .Navegador a { /* Estilo para los enlaces del navegador */
@@ -95,7 +96,7 @@ main i {
 }
 
 .Navegador a:hover {
-  color: grey !important; /* Cambiar color al pasar el ratón */
+  color: white !important; /* Cambiar color al pasar el ratón */
   background-color: black !important;
   border-radius: 1rem;
 }
@@ -134,7 +135,7 @@ main i {
 .main {
   margin: 0 auto;
   width: 80vw;
-  height: 80vh;
+  height: 90vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -158,6 +159,13 @@ span {
   margin-top: 10px;
   cursor: pointer;
   box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
+}
+
+.img-perfil{
+  border-radius: 1rem;
+  box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75);
 }
 
 .descargar-cv:hover {
@@ -198,6 +206,10 @@ span {
   max-width: 120px; /* Ajusta el tamaño máximo de las imágenes */
   object-fit: contain; /* Asegura que las imágenes no se deformen */
   transition: transform 0.3s ease; /* Efecto de hover opcional */
+  box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75);
+border-radius: 1rem
 }
 
 .JavaScriptClass img{
@@ -216,6 +228,17 @@ span {
 .about-info h2 {
   font-size: 2em;
   color: #23263b;
+}
+
+.descripcion{
+  box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75);
+  border-radius: 1rem;
+  background-color: #0d112c;
+  padding: 1em;
+  margin-bottom: 2em;
+  color: white;
 }
 
 .divider {
@@ -259,6 +282,7 @@ span {
   padding: 15px; /* Espaciado interno */
   box-sizing: border-box; /* Incluye el padding y el border en el tamaño */
   transition: transform 0.3s ease; /* Animación al hover */
+  width: 80%;
 }
 
 
@@ -276,8 +300,9 @@ span {
   margin: 0;
   padding: 20px 0; /* Espaciado interno */
   box-sizing: border-box;
-  box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
-  border: 1px solid aqua; /* Bordes destacados */
+  box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75) inset;
   border-radius: 1rem;
   background-color: #0d112c;
   transition: transform 0.3s ease; /* Animación al hover */
@@ -350,8 +375,9 @@ span {
   margin: 0;
   padding: 20px 0; /* Espaciado interno */
   box-sizing: border-box;
-  box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
-  border: 1px solid aqua; /* Bordes destacados */
+  box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75) inset;
+  -webkit-box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75) inset;
+  -moz-box-shadow: 10px 10px 11px 2px rgba(0,0,0,0.75) inset;
   border-radius: 1rem;
   background-color: #0d112c;
   transition: transform 0.3s ease; /* Animación al hover */
